@@ -9,9 +9,10 @@ kotlin {
     androidTarget {
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
+            freeCompilerArgs.add("-Xexpect-actual-classes")
         }
     }
-    
+
     listOf(
         iosArm64(),
         iosSimulatorArm64()
@@ -21,14 +22,26 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     sourceSets {
         commonMain.dependencies {
             // put your Multiplatform dependencies here
         }
+        androidMain.dependencies {
+            implementation(libs.androidx.activity.compose)
+            implementation(libs.androidx.lifecycle.viewmodelCompose)
+        }
+
+        iosMain.dependencies {
+
+        }
+
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
+    }
+    sourceSets.commonMain.dependencies {
+        implementation(libs.kotlin.coroutines.core)
     }
 }
 
