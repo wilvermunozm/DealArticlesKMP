@@ -16,6 +16,7 @@ kotlin-coroutines = "1.10.2"
 coil = "3.3.0"
 okhttp = "3.3.0"
 skie = "0.10.6"
+composeNavigation = "2.9.4"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -41,6 +42,9 @@ coil = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil" }
 
 #OkHttp
 okhttp-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref = "okhttp" }
+
+#Navigation
+composeNavigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

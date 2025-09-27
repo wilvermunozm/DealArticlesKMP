@@ -9,8 +9,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
@@ -31,12 +35,14 @@ import com.wil.dealarticleskmp.articles.ArticlesViewModel
 
 @Composable
 fun ArticlesScreen(
+    onAboutClick: () -> Unit,
     viewModel: ArticlesViewModel
 ) {
     val articlesState by viewModel.articlesState.collectAsState()
 
     Column {
-        AppBar()
+        AppBar(onAboutClick)
+
         if (articlesState.isLoading) {
             Loader()
         }
@@ -99,9 +105,16 @@ private fun ArticleItem(article: Article) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun AppBar() {
+private fun AppBar(
+    onAboutClick: () -> Unit
+) {
     TopAppBar(
-        title = { Text("Articles") }
+        title = { Text("Articles") },
+        actions = {
+            IconButton(onClick = onAboutClick) {
+                Icon(Icons.Default.Info, contentDescription = "About")
+            }
+        }
     )
 
 }

@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
 import com.wil.dealarticleskmp.articles.ArticlesViewModel
-import com.wil.dealarticleskmp.screens.ArticlesScreen
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,7 +16,7 @@ class MainActivity : ComponentActivity() {
         Platform().logSystemInfo()
 
         setContent {
-            ArticlesScreen(
+            AppScaffold(
                 viewModel = articlesViewModel
             )
         }

@@ -31,6 +31,7 @@ kotlin {
             implementation(projects.shared)
             implementation(libs.coil)
             implementation(libs.okhttp.network)
+            implementation(libs.composeNavigation)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
