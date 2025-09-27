@@ -16,7 +16,7 @@ extension ArticlesScreen {
         private(set) var articlesState : ArticlesState
         
         init() {
-            articlesViewModel = ArticlesViewModel()
+            articlesViewModel = ArticlesInjector().articlesViewModel
             articlesState = articlesViewModel.articlesState.value
         }
         

@@ -32,6 +32,8 @@ kotlin {
             implementation(libs.coil)
             implementation(libs.okhttp.network)
             implementation(libs.composeNavigation)
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

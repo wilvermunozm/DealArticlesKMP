@@ -1,5 +1,6 @@
 package com.wil.dealarticleskmp.articles
 
+
 class ArticlesUseCase(private val articlesService: ArticlesService) {
     suspend fun fetchArticles(): List<Article> {
         return articlesService.fetchArticles().map {
