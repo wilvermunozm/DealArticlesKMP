@@ -19,8 +19,18 @@ class ArticlesViewModel : BaseViewModel() {
 
     fun loadArticles() {
         scope.launch {
-            delay(500)
+            delay(1500)
+
+            _articlesState.emit(
+                ArticlesState(
+                    error = "Error, correeee!!!!"
+                )
+            )
+
+            delay(1500)
+
             val fetchedArticles = fetchArticles()
+
             _articlesState.emit(
                 ArticlesState(
                     articles = fetchedArticles,
@@ -38,7 +48,7 @@ class ArticlesViewModel : BaseViewModel() {
             title = "Article 1",
             description = "Description 1",
             url = "https://example.com",
-            urlToImage = "https://example.com",
+            urlToImage = "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
             publishedAt = "2022-01-01",
             content = "Content 1"
         ),
@@ -46,8 +56,8 @@ class ArticlesViewModel : BaseViewModel() {
             id = "2",
             title = "Article 2",
             description = "Description 2",
-            url = "https://example.com",
-            urlToImage = "https://example.com",
+            url = "https://mawiapps.com/wp-content/uploads/2025/05/image__2_-removebg-preview-1-3.png",
+            urlToImage = "https://mawiapps.com/wp-content/uploads/2025/05/image__2_-removebg-preview-1-3.png",
             publishedAt = "2022-01-02",
             content = "Content 2"
         ),
@@ -56,7 +66,7 @@ class ArticlesViewModel : BaseViewModel() {
             title = "Article 3",
             description = "Description 3",
             url = "https://example.com",
-            urlToImage = "https://example.com",
+            urlToImage = "https://media.istockphoto.com/id/814423752/photo/eye-of-model-with-colorful-art-make-up-close-up.jpg?s=612x612&w=0&k=20&c=l15OdMWjgCKycMMShP8UK94ELVlEGvt7GmB_esHWPYE=",
             publishedAt = "2022-01-03",
             content = "Content 3"
         )

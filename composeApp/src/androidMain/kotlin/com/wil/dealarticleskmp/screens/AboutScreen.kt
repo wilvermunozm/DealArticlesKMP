@@ -1,4 +1,4 @@
-package com.wil.dealarticleskmp
+package com.wil.dealarticleskmp.screens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -11,6 +11,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import com.wil.dealarticleskmp.Platform
 
 @Composable
 fun AboutScreen() {
