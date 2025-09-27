@@ -16,7 +16,8 @@ kotlin-coroutines = "1.10.2"
 coil = "3.3.0"
 okhttp = "3.3.0"
 skie = "0.10.6"
-composeNavigation = "2.9.4"
+composeNavigation = "2.9.5"
+ktorClient = "3.3.0"
 
 [libraries]
 kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test", version.ref = "kotlin" }
@@ -46,6 +47,13 @@ okhttp-network = { module = "io.coil-kt.coil3:coil-network-okhttp", version.ref 
 #Navigation
 composeNavigation = { module = "androidx.navigation:navigation-compose", version.ref = "composeNavigation" }
 
+#Ktor
+ktor-client = { module = "io.ktor:ktor-client-core", version.ref = "ktorClient" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorClient" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClient" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClient" }
+ktor-client-darwin = { module = "io.ktor:ktor-client-darwin", version.ref = "ktorClient" }
+
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }
 androidLibrary = { id = "com.android.library", version.ref = "agp" }
@@ -53,3 +61,4 @@ composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMul
 composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 skie = { id = "co.touchlab.skie", version.ref = "skie" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
