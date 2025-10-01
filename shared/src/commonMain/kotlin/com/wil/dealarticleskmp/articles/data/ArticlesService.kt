@@ -1,4 +1,4 @@
-package com.wil.dealarticleskmp.articles
+package com.wil.dealarticleskmp.articles.data
 
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
@@ -15,7 +15,7 @@ class ArticlesService(
         val response: ArticlesResponse = client.get(
             "https://newsapi.org/v2/top-headlines?country=$countryCode&category=$category&apiKey=$apiKey"
         ).body()
-        
+
         return response.articles
     }
 }

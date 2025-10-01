@@ -30,8 +30,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.wil.dealarticleskmp.articles.Article
-import com.wil.dealarticleskmp.articles.ArticlesViewModel
+import com.wil.dealarticleskmp.articles.domain.Article
+import com.wil.dealarticleskmp.articles.presentation.ArticlesViewModel
 import org.koin.androidx.compose.koinViewModel
 
 @Composable

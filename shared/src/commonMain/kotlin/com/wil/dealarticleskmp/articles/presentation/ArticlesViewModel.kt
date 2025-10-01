@@ -1,6 +1,8 @@
-package com.wil.dealarticleskmp.articles
+package com.wil.dealarticleskmp.articles.presentation
 
 import com.wil.dealarticleskmp.BaseViewModel
+import com.wil.dealarticleskmp.articles.domain.Article
+import com.wil.dealarticleskmp.articles.domain.ArticlesUseCase
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch

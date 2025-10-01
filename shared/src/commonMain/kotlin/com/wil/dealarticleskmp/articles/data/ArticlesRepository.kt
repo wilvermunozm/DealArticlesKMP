@@ -1,4 +1,4 @@
-package com.wil.dealarticleskmp.articles
+package com.wil.dealarticleskmp.articles.data
 
 class ArticlesRepository(
     private val datasource: ArticlesDatasource,

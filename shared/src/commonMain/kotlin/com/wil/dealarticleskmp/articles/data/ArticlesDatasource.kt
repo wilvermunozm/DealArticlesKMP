@@ -1,4 +1,6 @@
-package com.wil.dealarticleskmp.articles
+package com.wil.dealarticleskmp.articles.data
+
+import com.wil.dealarticleskmp.articles.ArticlesDb
 
 class ArticlesDatasource(private val database: ArticlesDb) {
     fun getAllArticles(): List<ArticleRaw> =
