@@ -1,4 +1,4 @@
-CREATE TABLE Article  (
+CREATE TABLE Articles  (
     title TEXT NOT NULL,
     description TEXT,
     date TEXT NOT NULL,
@@ -6,11 +6,11 @@ CREATE TABLE Article  (
 );
 
 insertArticle:
-INSERT INTO Article (title, description, date, imageUrl)
+INSERT INTO Articles (title, description, date, imageUrl)
 VALUES (?, ?, ?, ?);
 
 selectArticles:
-SELECT * FROM Article;
+SELECT * FROM Articles;
 
 removeAllArticles:
-DELETE FROM Article;
+DELETE FROM Articles;

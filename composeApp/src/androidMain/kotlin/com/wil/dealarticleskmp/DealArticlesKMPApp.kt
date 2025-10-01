@@ -1,6 +1,7 @@
 package com.wil.dealarticleskmp
 
 import android.app.Application
+import com.wil.dealarticleskmp.di.dataBaseModule
 import com.wil.dealarticleskmp.di.sharedCoinModules
 import com.wil.dealarticleskmp.di.viewModelsModule
 import org.koin.android.ext.koin.androidContext
@@ -11,7 +12,7 @@ class DealArticlesKMPApp : Application() {
         super.onCreate()
         startKoin {
             androidContext(this@DealArticlesKMPApp)
-            modules(sharedCoinModules + viewModelsModule)
+            modules(sharedCoinModules + viewModelsModule + dataBaseModule)
         }
     }
 }

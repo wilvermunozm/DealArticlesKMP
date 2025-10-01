@@ -1,9 +1,9 @@
 package com.wil.dealarticleskmp.articles
 
 
-class ArticlesUseCase(private val articlesService: ArticlesService) {
+class ArticlesUseCase(private val articlesRepository: ArticlesRepository) {
     suspend fun fetchArticles(): List<Article> {
-        return articlesService.fetchArticles().map {
+        return articlesRepository.getAllArticles().map {
             Article(
                 id = "",
                 title = it.title,

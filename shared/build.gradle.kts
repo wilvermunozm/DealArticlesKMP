@@ -67,7 +67,7 @@ android {
 
 sqldelight {
     databases {
-        create(name = "articlesDb") {
+        create(name = "ArticlesDb") {
             packageName = "com.wil.dealarticleskmp.articles"
         }
     }
